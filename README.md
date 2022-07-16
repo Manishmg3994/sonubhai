@@ -1,4 +1,22 @@
 # sonubhai
+#hello brother never forget to specify your own uuid and cccid and make sure both are same even in app and also in .ino file that you have flashed
+```[
+        _buildAdvRow(
+            context, 'Complete Local Name', result.advertisementData.localName),
+        _buildAdvRow(context, 'Tx Power Level',
+            '${result.advertisementData.txPowerLevel ?? 'N/A'}'),
+        _buildAdvRow(context, 'Manufacturer Data',
+            getNiceManufacturerData(result.advertisementData.manufacturerData)),
+        _buildAdvRow(
+            context,
+            'Service UUIDs',
+            (result.advertisementData.serviceUuids.isNotEmpty)
+                ? result.advertisementData.serviceUuids.join(', ').toUpperCase() //here your uuid 1st , then your ...
+                : 'N/A'),
+        _buildAdvRow(context, 'Service Data',
+            getNiceServiceData(result.advertisementData.serviceData)),
+      ],
+```
 
 A new Flutter project.
 
